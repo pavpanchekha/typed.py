@@ -59,7 +59,7 @@ The builtin types include:
 
     - ``Object`` (anything at all, not just things that inherit from
       ``object``)
-    - ``Complex`` (``complex``, ``float``, or and integral type)
+    - ``Complex`` (``complex``, ``float``, or an integral type)
     - ``Real`` (``float`` or an integral type)
     - ``Integer`` (``int`` or ``long``; an integral type)
     - ``Boolean`` (``bool``)
@@ -85,7 +85,7 @@ For example, the `is` method for ``Object`` is simply::
     def is(self, x):
         return True
 
-Because, after all, everything is an object. Not that `a priori`, objects have
+Because, after all, everything is an object. Note that `a priori`, objects have
 no type; one can only ask a type if an object is an instance. This is why they
 are called `inquisitive`: you always have to ask if you want to know if an object
 is an instance of something.
@@ -103,7 +103,7 @@ the given type is a subclass of it. For example, the one for ``Object`` is::
 These subclass relations are used to determine which method to call if a
 function has, for example, two implementations with signatures ``Integer,
 Integer`` and ``Real, Real``: clearly you want the one with ``Integer``\ s to
-be called if possible; and it is, because ``Integer.sub(Real)`` returns
+be called if possible; and it is, because ``issubclass(Integer, Real)`` returns
 ``True``.
 
 Now, the nice thing is that this allows you to construct more complex types
@@ -121,7 +121,7 @@ So, for example::
     >>> isinstance(3, EvenInt)
     False
 
-Some other type functions are built in to ``typed.py``. ``fn(f)`` is another way
+Some other type functions are built into ``typed.py``. ``fn(f)`` is another way
 of saying ``restrict(Object, f)``. ``typedef(T, name)`` copies the type ``T``
 and renames it (sometimes useful if you use type functions to construct types).
 ``eq(x)`` creates a new type whose only instance is ``x``; it's equivalent to
