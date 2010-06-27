@@ -57,22 +57,22 @@ Yay, both signatures work!
 
 The builtin types include:
 
-    - ``Object`` (anything at all, not just things that inherit from
-      ``object``)
-    - ``Complex`` (``complex``, ``float``, or an integral type)
-    - ``Real`` (``float`` or an integral type)
-    - ``Integer`` (``int`` or ``long``; an integral type)
-    - ``Boolean`` (``bool``)
-    - ``String`` (guess!)
-    - ``Type`` (An inquisitive type)
-    - ``PyType`` (A python class or type)
-    - ``Tuple`` (A tuple of any length or type)
-    - ``List`` (A list of any type) and ``List(T)`` (A list of type ``T``
-      elements)
-    - ``Dict`` (A dict of any type to any type), ``Dict(T)`` (A list where all
-      keys have type ``T``), and ``Dict(K, V)`` (A dict with keys of type ``K``
-      and values of type ``V``)
-    - ``OneOf(*x)`` (Type of things equal to one of the elements of ``x``)
+- ``Object`` (anything at all, not just things that inherit from
+  ``object``)
+- ``Complex`` (``complex``, ``float``, or an integral type)
+- ``Real`` (``float`` or an integral type)
+- ``Integer`` (``int`` or ``long``; an integral type)
+- ``Boolean`` (``bool``)
+- ``String`` (guess!)
+- ``Type`` (An inquisitive type)
+- ``PyType`` (A python class or type)
+- ``Tuple`` (A tuple of any length or type)
+- ``List`` (A list of any type) and ``List(T)`` (A list of type ``T``
+  elements)
+- ``Dict`` (A dict of any type to any type), ``Dict(T)`` (A list where all
+  keys have type ``T``), and ``Dict(K, V)`` (A dict with keys of type ``K``
+  and values of type ``V``)
+- ``OneOf(*x)`` (Type of things equal to one of the elements of ``x``)
 
 What are Inquisitive Types?
 ---------------------------
@@ -191,7 +191,7 @@ arguments::
     @typed(restrict(String, lambda x: x.startswith("ftp")))
     def download(x):
         import ftplib
-        f = ftplib.FTP(dir)
+        f = ftplib.FTP(x)
         return f.getwelcome()
 
 Finally, you can combine these to make those strings you ask people to pass to
