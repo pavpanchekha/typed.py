@@ -11,7 +11,7 @@ setup( name    = "typed.py"
      , license = "LICENSE.txt"
      , packages= ["typed"]
      , description = "Inquisitive types and multiple dispatch, now for Python!"
-     , long_description = open("README.txt").read()
+     , long_description = open("README.rst").read()
 
      , classifiers = [
            "Development Status :: 4 - Beta"
