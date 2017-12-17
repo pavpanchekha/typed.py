@@ -1,6 +1,9 @@
 Multiple Dispatch and Inquisitive Types for Python
 ==================================================
 
+**Warning**: This code is deprecated and will not be maintained. If you
+would like types for Python, please check out Mypy.
+
 ``typed.py`` implements multimethods (also known as multiple dispatch) for
 Python. However, instead of basing the types used for dispatch on the
 standard Python class system, ``typed.py`` uses a method called `inquisitive
